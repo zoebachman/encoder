@@ -7,10 +7,14 @@ im = Image.open("plain_heart.jpg")
 
 px = list(im.getdata())
 
-white_pixels = []
-black_pixels = []
+# white_pixels = []
+# black_pixels = []
 
 all_pixels = []
+
+count = 0
+
+count_list = []
 
 
 for i in px:
@@ -19,23 +23,21 @@ for i in px:
 	elif i == (255, 255, 255):
 		all_pixels.append("B")
 
-#print(all_pixels)
-
-
-# for j in all_pixels:
-# 	position = all_pixels.index(j) #either 0 or 583?
-	#print (all_pixels[0]) #getting stuck on relating position
-	#print (all_pixels[0:len(all_pixels - j)])
+# len(all_pixels) = 14470
+print(len(all_pixels))
 
 for z in range(len(all_pixels)): #getting position
   if all_pixels[z] == "B":
   	#check to see if next one is also B
   	if all_pixels[(z+1)] == "B":
-  		print("2B")
-  	# elif all_pixels[z:(z+1)] == "W":
-  	# 	print("BW")
-  	# else:
-  	# 	print ("no")
+  		#print("2B") 
+  		count = count + 1 #increment count by 1
+  	elif all_pixels[(z+1)] == "W": #but I think the [z:z+1] will be helpful somewhere
+  		# count_list.append(str(count) + "B")
+  		print(str(count) + "B")
+  		count = 0 #reset count to 0
+  	else:
+  		print ("no")
     #print (z)
     #print(z+1) #position one over
     #print(all_pixels[z:(z+1)])
