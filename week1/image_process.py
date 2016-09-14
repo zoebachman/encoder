@@ -21,13 +21,24 @@ for i in px:
 
 #print(all_pixels)
 
-#list comprehension
-# for i in [i for i, x in enumerate(all_pixels) if x == "W"]:
-# 	print (i) #printing position in list
 
-for j in all_pixels:
-	print all_pixels.index(j)
+# for j in all_pixels:
+# 	position = all_pixels.index(j) #either 0 or 583?
 	#print (all_pixels[0]) #getting stuck on relating position
 	#print (all_pixels[0:len(all_pixels - j)])
+
+for z in range(len(all_pixels)): #getting position
+  if all_pixels[z] == "B":
+  	#check to see if next one is a B
+  	if all_pixels[z:(z+1)] == "B":
+  		print("2B")
+  	else:
+  		print("nope")
+    #print (z)
+    #print(z+1) #position one over
+
+    #list comprehension
+# for i in [i for i, x in enumerate(all_pixels) if x == "W"]:
+# 	print (i) #printing position in list
 
 
