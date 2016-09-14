@@ -29,13 +29,16 @@ for i in px:
 
 for z in range(len(all_pixels)): #getting position
   if all_pixels[z] == "B":
-  	#check to see if next one is a B
-  	if all_pixels[z:(z+1)] == "B":
+  	#check to see if next one is also B
+  	if all_pixels[(z+1)] == "B":
   		print("2B")
-  	else:
-  		print("nope")
+  	# elif all_pixels[z:(z+1)] == "W":
+  	# 	print("BW")
+  	# else:
+  	# 	print ("no")
     #print (z)
     #print(z+1) #position one over
+    #print(all_pixels[z:(z+1)])
 
     #list comprehension
 # for i in [i for i, x in enumerate(all_pixels) if x == "W"]:
