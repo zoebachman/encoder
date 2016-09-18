@@ -44,6 +44,6 @@ def image_encode(image):
 
 
 if __name__ == "__main__": #calling the image_encode function
-    print(image_encode("heart_12px.png")) #how to make this modular
+    print(image_encode("plain_heart.jpg")) #how to make this modular
 
 
