@@ -16,7 +16,7 @@ def encode(string):
 
 
 
-        if (char != prevLetter):
+        elif (char != prevLetter):
 
             if firsttimethough == False:
                 result += str(sameCt)
