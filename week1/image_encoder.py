@@ -25,12 +25,8 @@ def image_encode(image):
             if firsttimethough == False: #this condition only applies to first time through
                 #same as .append - adding to results list
 
-                if count == 1:
-                    result += "(" + str(prev_pixel) + ")" + ", " 
-
-                elif count > 1:
-                    result += "(" + str(count) + ", " + " "
-                    result += str(prev_pixel) + ")" + ", "
+                result += "(" + str(count) + ", " 
+                result += str(prev_pixel) + ")" + ", "
 
                 count = 1 #reset count
 
@@ -39,7 +35,7 @@ def image_encode(image):
         prev_pixel = pixel #change current pixel to previous pixel
 
 
-    result += "(" + str(count) + ", " + " " #now that we've gone all the way through, printing count and pixel
+    result += "(" + str(count) + ", " #now that we've gone all the way through, printing count and pixel
     result += str(prev_pixel) + ")"
 
 
