@@ -1,9 +1,6 @@
 
 from PIL import Image
 
-def getpixel(image):
+def get_pixels(image):
 	im = Image.open(image)
-	px = list(im.getdata())
-	return px
-
-print(getpixel("plain_heart_bw.jpg"))
+	return list(im.getdata())
