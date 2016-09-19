@@ -1,5 +1,5 @@
 # encoder
-Encoder project for learning_machines
+Encoder project for NYU ITP Learning Machines class, Fall 2016
 
 One for regular strings, another for images! 
 
