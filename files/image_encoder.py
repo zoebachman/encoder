@@ -11,7 +11,7 @@ def image_encode(image):
     firsttimethough = True
     
     result = []
-    #each_pixel_count #empty string
+
 
     for pixel in all_pixels: 
 
@@ -22,7 +22,7 @@ def image_encode(image):
 
         elif (pixel != prev_pixel):
 
-            if firsttimethough == False: #this condition only applies to first time through
+            if firsttimethough == False: 
                 #same as .append - adding to results list
 
                 result += "(" + str(count) + ", " 
@@ -44,6 +44,6 @@ def image_encode(image):
 
 
 if __name__ == "__main__": #calling the image_encode function
-    print(image_encode("plain_heart.jpg")) #how to make this modular
+    print(image_encode("heart_12px.png")) #how to make this modular
 
 
